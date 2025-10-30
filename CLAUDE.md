@@ -70,6 +70,21 @@ uv run pytest tests/test_main.py
 uv run pytest tests/test_main.py::TestMain::test_main_success
 ```
 
+**Building the package:**
+```bash
+uv build
+```
+
+**Publishing to TestPyPI:**
+```bash
+uv publish --index-url https://test.pypi.org/legacy/
+```
+
+**Publishing to PyPI:**
+```bash
+uv publish
+```
+
 ## Project Structure
 
 - `main.py` - Entry point with CLI interface for fetching cat breed information
