@@ -46,10 +46,30 @@ uv run python <script.py>
 uv run <command>
 ```
 
+**Running tests:**
+```bash
+uv run pytest
+```
+
+**Running tests with coverage:**
+```bash
+uv run pytest --cov=. --cov-report=term-missing
+```
+
+**Running a specific test file:**
+```bash
+uv run pytest tests/test_main.py
+```
+
+**Running a specific test:**
+```bash
+uv run pytest tests/test_main.py::TestMain::test_main_success
+```
+
 ## Project Structure
 
-The project is currently in early stages with a simple structure:
-- `main.py` - Entry point with a `main()` function
+- `main.py` - Entry point with CLI interface for fetching cat breed information
+- `tests/` - Unit tests using pytest
 - `pyproject.toml` - Project configuration and dependencies
 - `uv.lock` - Locked dependency versions (managed by uv)
 
