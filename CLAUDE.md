@@ -18,7 +18,11 @@ This project uses `uv` instead of pip or poetry. All dependency management and v
 
 **Running the application:**
 ```bash
-uv run main.py
+# Using the installed script (recommended)
+uv run uv-cats Siamese
+
+# Or run the main.py file directly
+uv run main.py Siamese
 ```
 
 **Installing dependencies:**

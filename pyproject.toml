@@ -8,6 +8,16 @@ dependencies = [
     "requests>=2.32.5",
 ]
 
+[project.scripts]
+uv-cats = "main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
 [dependency-groups]
 dev = [
     "pytest>=8.4.2",
